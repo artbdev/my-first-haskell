@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 085cf52e7d181c0247a49ce9827d0952c7c3e2a4843be39aff1be836eb122ee3
+-- hash: 1619ae439e886e83fa4e7891f5955dcdd244b5d3cf309994a3dfffab0ba90d07
 
 name:           my-haskell-project
 version:        0.1.0.0
@@ -29,7 +29,9 @@ library
   exposed-modules:
       Lesson2
       Lesson3
+      Lesson4
       Lib
+      Test
   other-modules:
       Paths_my_haskell_project
   hs-source-dirs:

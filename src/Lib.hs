@@ -21,92 +21,19 @@ module Lib where
 someFunc :: IO ()
 someFunc = putStrLn "hello"
 
+--evaluating function output 
 
+-- >>> triple 4
+-- 12
 triple :: Int -> Int
 triple x = x * 3
 
-{-
-    https://www.youtube.com/watch?v=eI0A0Avparw
+--evaluating type info of expression
 
-    infix example:
-        -- (+) :: [a] -> [a] -> [a]
-        addMe a = (+) a 10
+-- >>> :t triple
+-- triple :: Int -> Int
 
-    infix info: 
-    in repl:
-        :i `div` 
-    repl output: 
-        ...
-        div :: a -> a -> a
-        ...
-        infixl 7 `div` left associative number is precedence, like order of operations
--}
-addMe :: Int -> Int
-addMe a = a + 10
+numberOne :: Int
+numberOne = 1 
 
-addMeInfix :: Int -> Int
-addMeInfix a = (+) a 10
-
-divMeByTwo :: Int -> Int
-divMeByTwo a = div a 2
-
-divMeByTwoInfix :: Int -> Int
-divMeByTwoInfix a = a `div` 2
-
-
-{-
-    order does not matter when modules are loaded,
-    but it does matter in the repl. Think of hoisting 
-    in javascript. 
--}
-funcSecondAbove :: Int
-funcSecondAbove  = funcFirstBelow two
-
-funcFirstBelow :: Int -> Int
-funcFirstBelow a = a + 2
-
-two :: Int
-two = 2
-
-
--- >>> funcFirstBelow two
--- 4
-
-{-
-    let scope example below:
--}
-
--- NOTE:: let clauses will not allow type definitions
-letFunc :: Int 
-letFunc =
-    let 
-        letFuncOne :: Int -> Int
-        letFuncOne a = a + 2
-
-        letFuncTwo :: Int
-        letFuncTwo = 12
-    in
-        letFuncOne letFuncTwo
-
--- >>> letFunc
--- 14
-
--- >>> letFuncTwo
--- Variable not in scope: letFuncTwo
-
--- where clauses
-
-whereFunc :: Int
-whereFunc = numOne + numTwo
-    where
-        numOne :: Int
-        numOne = 1
-
-        numTwo :: Int
-        numTwo = 2
-
--- >>> whereFunc
--- 3
-
--- >>> :t whereFunc
--- whereFunc :: Int
+-- >>> numberOne
