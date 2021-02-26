@@ -1,29 +1,4 @@
--- https://www.youtube.com/watch?v=1UyQ0fn6ke4&t=924s
--- single line comment
-{-
-    multi-line coment 
--}
-{-
-    holes:
-        funcName _ then save
-        compiler will give you hint
-        on what type the function takes
-
-    stack repl : to get interactive haskell console
-        :q quit the console
-        :h help
-
-    ghcid : command to get compiler to wacth file for errors
--}
-
-module Lib where
-
-someFunc :: IO ()
-someFunc = putStrLn "hello"
-
-
-triple :: Int -> Int
-triple x = x * 3
+module Lesson2 where
 
 {-
     https://www.youtube.com/watch?v=eI0A0Avparw
@@ -43,6 +18,9 @@ triple x = x * 3
 -}
 addMe :: Int -> Int
 addMe a = a + 10
+
+addMeTwo :: Int -> Int
+addMeTwo a = a + 2
 
 addMeInfix :: Int -> Int
 addMeInfix a = (+) a 10
