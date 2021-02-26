@@ -78,3 +78,46 @@ funcFirstBelow a = a + 2
 
 two :: Int
 two = 2
+
+
+-- >>> funcFirstBelow two
+-- 4
+
+{-
+    let scope example below:
+-}
+
+-- NOTE:: let clauses will not allow type definitions
+letFunc :: Int 
+letFunc =
+    let 
+        letFuncOne :: Int -> Int
+        letFuncOne a = a + 2
+
+        letFuncTwo :: Int
+        letFuncTwo = 12
+    in
+        letFuncOne letFuncTwo
+
+-- >>> letFunc
+-- 14
+
+-- >>> letFuncTwo
+-- Variable not in scope: letFuncTwo
+
+-- where clauses
+
+whereFunc :: Int
+whereFunc = numOne + numTwo
+    where
+        numOne :: Int
+        numOne = 1
+
+        numTwo :: Int
+        numTwo = 2
+
+-- >>> whereFunc
+-- 3
+
+-- >>> :t whereFunc
+-- whereFunc :: Int
